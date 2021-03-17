@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      .blue_letters{
+        color:blue;
+      }
+      .red_letters{
+        color:red;
+      }
+    </style>
+    <title>testiranje class based</title>
+  </head>
+  <body>
+    <h1>raka maka fon</h1>
+    {% block content %}
+    <ul>
+      {% for i in created %}
+      <li>{{i.firstname}} {{i.lastname}}</li>
+      {% endfor %}
+    </ul>
+    <br>
+
+    <br>
+    <hr>
+
+    <form class="" action="/" method="POST">
+      <span class='blue_letters'>{{form.firstname}} {{form.lastname}}</span>
+      {% csrf_token %}
+      <input type="submit" name="Submit" value="Submit">
+
+    </form>
+
+
+    {% endblock %}
+  </body>
+</html>
