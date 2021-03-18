@@ -15,24 +15,17 @@
   <body>
     <h1>raka maka fon</h1>
     {% block content %}
-    <ul>
-      {% for i in created %}
-      <li>{{i.firstname}} {{i.lastname}}</li>
-      {% endfor %}
-    </ul>
-    <br>
-
-    <br>
-    <hr>
-
     <form class="" action="/" method="POST">
       <span class='blue_letters'>{{form.firstname}} {{form.lastname}}</span>
       {% csrf_token %}
       <input type="submit" name="Submit" value="Submit">
-
     </form>
-
-
-    {% endblock %}
+    <hr>
+    <!-- <ul>
+      {% for i in created %}    ovo sam testirao, radi kako treba al na prvoj stranici
+      <li>{{i.firstname}} {{i.lastname}}</li>
+      {% endfor %}
+    </ul> -->
+      {% endblock %}
   </body>
 </html>
